@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PostCode
 {
+    /// <summary>
+    /// Object addres
+    /// </summary>
     class Addres
     {
         public string Name { get; set; }

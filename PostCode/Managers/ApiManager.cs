@@ -28,8 +28,14 @@ namespace PostCode
         public string Province { get; set; }
         public bool Error { get; set; }
 
+        /// <summary>
+        /// Sets the api data to the object 
+        /// </summary>
+        /// <param name="zipcode"></param>
+        /// <param name="number"></param>
         public void BuildData(string zipcode, string number)
         {
+
         dynamic jo = JObject.Parse(JsonData(zipcode, number));
             try
             {
@@ -50,7 +56,12 @@ namespace PostCode
                 Console.WriteLine("Address niet gevonden");
             }
         }
-
+        /// <summary>
+        /// Makes a call to the api with parameters
+        /// </summary>
+        /// <param name="zipcode"></param>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public string JsonData(string zipcode, string number)
         {
             try
